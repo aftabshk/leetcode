@@ -2,40 +2,17 @@ package org.leetcode.remove_element;
 
 class Solution {
     public int removeElement(int[] nums, int val) {
-
-        if (nums.length == 0) return 0;
-
-        int removedElementsStartsAt = nums.length - 1;
-        int i = 0;
-
-        while (i <= removedElementsStartsAt) {
-            if (nums[i] == val) {
-                int indexOfLastDifferentValue = getIndexOfLastDifferentValue(nums, val, removedElementsStartsAt, i);
-
-                if (indexOfLastDifferentValue != -1) {
-                    nums[i] = nums[indexOfLastDifferentValue];
-                    nums[indexOfLastDifferentValue] = val;
-                    i++;
-                }
-                removedElementsStartsAt = indexOfLastDifferentValue;
-            } else {
-                i++;
-            }
-        }
-
-        return i;
-    }
-
-    private static int getIndexOfLastDifferentValue(int[] nums, int val, int start, int end) {
-        int i = start;
-        while (i != end) {
+        int k = 0;
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] != val) {
-                return i;
+                nums[k] = nums[i];
+                k++;
             } else {
-                i--;
+                nums[k] = nums[i];
             }
         }
-        return -1;
+
+        return k;
     }
 
     public static void main(String[] args) {

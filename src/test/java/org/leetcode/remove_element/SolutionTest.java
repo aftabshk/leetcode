@@ -27,7 +27,7 @@ class SolutionTest {
         Integer k = solution.removeElement(nums, 2);
 
         assertEquals(k, 5);
-        int[] expected = {0, 1, 4, 0, 3};
+        int[] expected = {0, 1, 3, 0, 4};
 
         for (int i = 0; i < k; i++) {
             assertEquals(expected[i], nums[i]);
