@@ -2,6 +2,9 @@ package org.leetcode.merge_sorted_array;
 
 public class Solution {
 
+    /***
+     * This is not an in-place algorithm. Rewrite it.
+     */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int[] sorted = new int[m + n];
 
