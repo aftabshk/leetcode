@@ -12,14 +12,14 @@ public class Solution {
             int count = counter.getOrDefault(num, 0);
             counter.put(num, count + 1);
 
-            if (isMajorityElement(counter, num, nums.length)) return num;
+            if (isMajorityElement(count + 1, nums.length)) return num;
         }
 
         return result;
     }
 
-    private static boolean isMajorityElement(Map<Integer, Integer> counter, int val, int length) {
-        return counter.get(val) > length / 2;
+    private static boolean isMajorityElement(int count, int length) {
+        return count > length / 2;
     }
 
     public static void main(String[] args) {
