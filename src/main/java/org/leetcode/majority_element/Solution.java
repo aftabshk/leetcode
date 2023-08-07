@@ -6,17 +6,13 @@ import java.util.Map;
 public class Solution {
     public int majorityElement(int[] nums) {
         Map<Integer, Integer> counter = new HashMap<>();
-        int result = 0;
+        int result = -1;
 
-        for (int i = 0, j = nums.length - 1; i < Math.ceil(nums.length / 2.0); i++, j--) {
-            counter.computeIfPresent(nums[i], (key, val) -> val + 1);
-            counter.putIfAbsent(nums[i], 1);
-            if (i != j) {
-                counter.computeIfPresent(nums[j], (key, val) -> val + 1);
-                counter.putIfAbsent(nums[j], 1);
-            }
-            if (isMajorityElement(counter, nums[i], nums.length)) result = nums[i];
-            if (isMajorityElement(counter, nums[j], nums.length)) result = nums[j];
+        for (int num : nums) {
+            int count = counter.getOrDefault(num, 0);
+            counter.put(num, count + 1);
+
+            if (isMajorityElement(counter, num, nums.length)) return num;
         }
 
         return result;
