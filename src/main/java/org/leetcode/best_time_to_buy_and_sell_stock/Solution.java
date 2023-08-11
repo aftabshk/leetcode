@@ -4,17 +4,14 @@ public class Solution {
 
     public int maxProfit(int[] prices) {
         int maxProfit = 0;
-        MaxProfitValues maxProfitValues = new MaxProfitValues();
+        int possibleMaxProfitValue1 = prices[0];
 
-        maxProfitValues.possibleMaxProfitValue1 = prices[0];
         for (int i = 1; i < prices.length; i++) {
-            int possibleMaxProfit = prices[i] - maxProfitValues.possibleMaxProfitValue1;
+            int possibleMaxProfit = prices[i] - possibleMaxProfitValue1;
             if (possibleMaxProfit > maxProfit) {
                 maxProfit = possibleMaxProfit;
-                maxProfitValues.value1 = maxProfitValues.possibleMaxProfitValue1;
-                maxProfitValues.value2 = prices[i];
-            } else if (prices[i] < maxProfitValues.possibleMaxProfitValue1) {
-                maxProfitValues.possibleMaxProfitValue1 = prices[i];
+            } else if (prices[i] < possibleMaxProfitValue1) {
+                possibleMaxProfitValue1 = prices[i];
             }
         }
 
@@ -22,12 +19,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().maxProfit(new int[]{7, 6, 4, 3, 1}));
+        System.out.println(new Solution().maxProfit(new int[]{7,1,5,3,6,4}));
     }
-}
-
-class MaxProfitValues {
-    int value1;
-    int value2;
-    int possibleMaxProfitValue1;
 }
