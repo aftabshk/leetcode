@@ -8,7 +8,7 @@ The test cases are generated so that the answer will be less than or equal to 2 
 
 ### Example 1:
 
-![robot_maze](https://github.com/affishaikh/leetcode/blob/main/images/robot_maze.png?raw=true)
+![example](https://github.com/aftabshk/leetcode/blob/main/images/robot_maze.png?raw=true)
 
 Input: m = 3, n = 7
 
