@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-class Solution {
+class SolutionWithRecursion {
 
     private Map<Point, Integer> paths = new HashMap<>();
 
@@ -28,7 +28,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().uniquePaths(3, 7));
+        System.out.println(new SolutionWithRecursion().uniquePaths(3, 7));
     }
 
     class Point {
