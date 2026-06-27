@@ -6,6 +6,10 @@ Given the two integers m and n, return the number of possible unique paths that 
 
 The test cases are generated so that the answer will be less than or equal to 2 * 109.
 
+### Topics
+
+Dynamic programming
+
 ### Example 1:
 
 ![example](https://github.com/aftabshk/leetcode/blob/main/images/robot_maze.png?raw=true)

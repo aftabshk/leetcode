@@ -8,9 +8,9 @@ class SolutionWithRecursion {
 
     private Map<Point, Integer> paths = new HashMap<>();
 
+    /** Dynamic Programming & Memoization */
     public int uniquePaths(int m, int n, int gridLimitM, int gridLimitN) {
-        if (m >= gridLimitM || n >= gridLimitN) return 0;
-        if (m == gridLimitM - 1 && n == gridLimitN - 1) return 1;
+        if (m >= gridLimitM - 1 || n >= gridLimitN - 1) return 1;
         Point point = new Point(m, n);
         if (paths.containsKey(point)) return paths.get(point);
 
@@ -28,7 +28,7 @@ class SolutionWithRecursion {
     }
 
     public static void main(String[] args) {
-        System.out.println(new SolutionWithRecursion().uniquePaths(3, 7));
+        System.out.println(new SolutionWithRecursion().uniquePaths(5000, 10000));
     }
 
     class Point {
