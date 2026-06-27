@@ -50,8 +50,6 @@ class Solution {
         if (rowIndex - 1 >= 0 && columnIndex < rowIndex)
             memo.get(rowIndex - 1).set(columnIndex, column);
 
-        System.out.println(memo);
-
         return columnMinusOne + column;
     }
 
