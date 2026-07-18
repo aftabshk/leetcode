@@ -1,4 +1,4 @@
-## Decode Ways
+## Decode Ways - Medium
 
 You have intercepted a secret message encoded as a string of numbers. The message is decoded via the following mapping:
 

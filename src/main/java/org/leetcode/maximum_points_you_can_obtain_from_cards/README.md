@@ -1,4 +1,4 @@
-## 1423. Maximum Points You Can Obtain from Cards
+## 1423. Maximum Points You Can Obtain from Cards - Medium
 
 There are several cards arranged in a row, and each card has an associated number of points. The points are given in the integer array cardPoints.
 
