@@ -52,8 +52,8 @@ public class Solution {
                 ++numberOfZeroes;
             } else if (nums[r] == 0 && numberOfZeroes >= k) {
                 zeroIndexes.add(r);
+                l = zeroIndexes.get(currentIndexInZero) + 1;
                 ++currentIndexInZero;
-                l = zeroIndexes.get(currentIndexInZero);
             }
             longest = Math.max(longest, (r - l) + 1);
         }
