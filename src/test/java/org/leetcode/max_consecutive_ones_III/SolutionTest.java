@@ -11,5 +11,6 @@ class SolutionTest {
     void shouldPass() {
         Assertions.assertEquals(6, new Solution().longestOnes(new int[]{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2));
         Assertions.assertEquals(10, new Solution().longestOnes(new int[]{0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1}, 3));
+        Assertions.assertEquals(4, new Solution().longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1}, 0));
     }
 }
